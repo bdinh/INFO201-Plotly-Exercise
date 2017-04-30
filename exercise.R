@@ -85,12 +85,12 @@ p <- p %>% layout(title = "Neoplasms Mortality Rate in King County (2005-2014)",
 
 
 ########################### Bonus ###################################
-# Now, let's add some color to our plot! 
+# Now, let's add some color to our plot.
 # Make a new plot and add pink for the female trace, and blue for the male trace.
 p2 <- plot_ly(prepped.data, x = ~year_id , y = ~Female, type = 'bar', name = 'Female', marker = list(color = "rgb(255,192,203)")) %>% 
   add_trace(y=~Male, name = 'Male', marker = list(color = "rgb(135,206,250)")) %>%
   layout(title = "Neoplasms Mortality Rate in King County (2005-2014)",
-         xaxis = list(title = "Years"),
+         xaxis = list(title = ""),
          yaxis = list(title = "Mortality Rates"),
          margin = list(b = 100),
          barmode = "group")
